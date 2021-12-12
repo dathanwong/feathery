@@ -39,7 +39,7 @@ const TextFieldElement = ({id, index}) => {
                 style={{padding:"10px 5px", fontSize:"16px", border:"1px solid black", borderRadius:"5px", width:"200px"}}
               />
               :
-              <div style={{padding:"10px 5px", fontSize:"16px", border:"1px solid black", borderRadius:"5px", width:"200px"}}>
+              <div style={{padding:"10px 5px", fontSize:"16px", border:"1px solid black", borderRadius:"5px", width:"200px", backgroundColor:"white"}}>
                 {value}
               </div>
             }

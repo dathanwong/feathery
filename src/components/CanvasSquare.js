@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import ButtonElement from './ButtonElement';
 import TextBoxElement from './TextBoxElement';
@@ -7,6 +7,7 @@ import EmptyElement from './EmptyElement';
 
 
 const CanvasSquare = ({id, index, element, position}) => {
+
 
   const renderElement = () =>{
     if(element === null){
@@ -27,9 +28,9 @@ const CanvasSquare = ({id, index, element, position}) => {
   return ( 
       <Droppable droppableId={position}>
         {
-          (provided) => (
+          (provided, snapshot) => (
             <div 
-              style={{display:"flex", width:"250px", height:"75px", border:"1px solid lightgray", justifyContent:"center", alignItems:"center"}}
+              style={{display:"flex", width:"250px", height:"75px", justifyContent:"center", alignItems:"center", backgroundColor:snapshot.isDraggingOver ? "lightblue" : "white"}}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
