@@ -10,7 +10,7 @@ import elementTemplates from '../elementTemplates';
 
 const MainPage = (props) => {
 
-  const [data, setData] = useState(initialData.components);
+  const [data, setData] = useState([null,null,null,null,null,null,null,null]);
 
   const onDragEnd = (result) => {
     console.log(result);
@@ -19,6 +19,10 @@ const MainPage = (props) => {
     let tempData = [...data];
     //Do nothing if moving tray element to somewhere off the canvas
     if(destination === null && source.droppableId==='element-tray'){
+      return;
+    }
+    //Do nothing if moving anything to the element tray
+    if(destination?.droppableId === 'element-tray'){
       return;
     }
     //Delete element if moved off the canvas

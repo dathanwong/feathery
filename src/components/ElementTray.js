@@ -7,7 +7,7 @@ import TextFieldElement from './TextFieldElement';
 
 const ElementTray = (props) => {
   return ( 
-      <Droppable droppableId={'element-tray'}>
+      <Droppable droppableId={'element-tray'} isDropDisabled={true}>
         {
           (provided) => (
             <div 
