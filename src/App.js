@@ -1,16 +1,11 @@
 import './App.css';
-import Element from './components/TextBoxElement';
-import ElementTray from './components/ElementTray';
-import FormCanvas from './components/FormCanvas';
-import FormCanvasNew from './components/FormCanvasNew';
-import ButtonElement from './components/ButtonElement';
+import MainPage from './components/MainPage';
 
 function App() {
+
   return ( 
   <>
-    <ElementTray>
-    </ElementTray>
-    <FormCanvas/>
+    <MainPage/>
   </>
   )
 }
