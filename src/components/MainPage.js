@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Element from './TextBoxElement';
+import React, { useState } from 'react';
 import ElementTray from './ElementTray';
 import FormCanvas from './FormCanvas';
-import FormCanvasNew from './FormCanvasNew';
-import ButtonElement from './ButtonElement';
 import { DragDropContext } from 'react-beautiful-dnd';
-import initialData from '../initialData';
 import elementTemplates from '../elementTemplates';
+import ButtonElement from './ButtonElement';
+import TextBoxElement from './TextBoxElement';
+import TextFieldElement from './TextFieldElement';
 
 const MainPage = (props) => {
 
@@ -47,6 +46,9 @@ const MainPage = (props) => {
   return ( 
     <DragDropContext onDragEnd={onDragEnd}>
       <ElementTray>
+        <ButtonElement id="button" index={100} />
+        <TextFieldElement id="textField" index={101}/>
+        <TextBoxElement id="textBox" index={102}/>
       </ElementTray>
       <FormCanvas data={data}/>
     </DragDropContext>

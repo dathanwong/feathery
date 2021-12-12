@@ -1,7 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import CanvasSquare from './CanvasSquare';
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import initialData from '../initialData';
 
 const FormCanvas = ({data}) => {
 

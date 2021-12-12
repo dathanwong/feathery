@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Droppable, Draggable } from 'react-beautiful-dnd';
-import ButtonElement from './ButtonElement';
-import TextBoxElement from './TextBoxElement';
-import TextFieldElement from './TextFieldElement';
+import React  from 'react';
+import { Droppable} from 'react-beautiful-dnd';
+
 
 
 const ElementTray = (props) => {
@@ -15,9 +13,7 @@ const ElementTray = (props) => {
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
-              <ButtonElement id="button" index={100} />
-              <TextFieldElement id="textField" index={101}/>
-              <TextBoxElement id="textBox" index={102}/>
+              {props.children}
               {provided.placeholder}
             </div>
           )
