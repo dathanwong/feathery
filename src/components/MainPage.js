@@ -9,7 +9,19 @@ import TextFieldElement from './TextFieldElement';
 
 const MainPage = (props) => {
 
-  const [data, setData] = useState([null,null,null,null,null,null,null,null]);
+  const rows = 4;
+  const cols = 2;
+
+  /**
+   * Generate the default grid array to store the component data
+   * @param {int} rows 
+   * @param {int} cols 
+   */
+  const generateGrid = (rows, cols) =>{
+    return new Array(rows*cols).fill(null);
+  }
+
+  const [data, setData] = useState(generateGrid(rows, cols));
 
   const onDragEnd = (result) => {
     console.log(result);
